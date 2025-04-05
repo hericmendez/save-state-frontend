@@ -4,18 +4,31 @@ html {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 :root {
-  --font-inter: "Inter", sans-serif;
   --font-press-start-2p: "Press Start 2P", monospace;
+  
 }
 
-.inter {
-  font-family: var(--font-inter);
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.press-start-2p {
-  font-family: var(--font-press-start-2p);
+/* Tema escuro */
+.dark-theme .ant-input,
+.dark-theme .ant-input-search,
+.dark-theme .ant-select-selector {
+  background-color: #1f1f1f !important; /* cor escura */
+  color: #fff !important;
+  border-color: #434343;
 }
 
+/* Placeholder */
+.dark-theme .ant-input::placeholder,
+.dark-theme .ant-select-selection-placeholder {
+  color: #8c8c8c !important;
+}
 
 @theme{
 /*Layout Colors (dark mode):*/

@@ -21,20 +21,23 @@ export default function LoginPage() {
     e.preventDefault();
   
     try {
-      const response = await axios.post<LoginResponse>("http://localhost:1337/login", {
-        email: email,
-        password: password,
-      });
-  
-      const { token } = response.data;
+      /*   const response = await axios.post<LoginResponse>(
+        "http://localhost:1337/login",
+        {
+          email: email,
+          password: password,
+        }
+      );
+
+            const { token } = response.data;
   
       // Salva o token no localStorage
       localStorage.setItem("session", token);
   
       console.log("Token salvo no localStorage:", token);
-  
+   */
       // Redireciona para a página protegida
-      router.push('/')
+      router.push("/");
     } catch (err) {
       console.error("Erro ao fazer login:", err);
     }

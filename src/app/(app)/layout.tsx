@@ -1,10 +1,10 @@
 "use client";
 import { Inter } from "next/font/google";
-import Header from "@/components/layoutElements/Header";
-import HeaderMobile from "@/components/layoutElements/HeaderMobile";
-import SideNav from "@/components/layoutElements/SideNav";
-import PageWrapper from "@/components/layoutElements/PageWrapper";
-import MarginWidthWrapper from "@/components/layoutElements/MarginWidthWrapper";
+import Header from "@/components/LayoutElements/Header";
+import HeaderMobile from "@/components/LayoutElements/HeaderMobile";
+import SideNav from "@/components/LayoutElements/SideNav";
+import PageWrapper from "@/components/LayoutElements/PageWrapper";
+import MarginWidthWrapper from "@/components/LayoutElements/MarginWidthWrapper";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { ReactNode, FC } from "react";
@@ -13,10 +13,9 @@ import { useRouter } from "next/navigation";
 import { GameProvider } from "@/context/GameContext";
 
 const AppLayout: FC<{ children: ReactNode }> = ({ children }) => {
-
   const router = useRouter();
 
-  useEffect(() => {
+  /*   useEffect(() => {
     const token = localStorage.getItem("session");
 
     if (!token) {
@@ -26,7 +25,8 @@ const AppLayout: FC<{ children: ReactNode }> = ({ children }) => {
       console.log("Token encontrado. Acesso permitido.");
       // Adicione lógica de validação adicional, se necessário
     }
-  }, []);
+  }, []); */
+
   return (
     <ThemeProvider>
       <GameProvider>

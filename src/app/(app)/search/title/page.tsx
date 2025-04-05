@@ -1,8 +1,8 @@
 "use client";
 import { columns } from "@/components/DataTable/Columns";
 import { DataTable } from "@/components/DataTable/DataTable";
-import { games } from "@/components/DataTable/data";
-import { Game } from "@/@types/Game";
+import { games } from "@/data";
+import { Game } from "@/@types";
 import { useEffect, useState } from "react";
 
 async function getData(): Promise<Game[]> {

@@ -1,7 +1,7 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { Game } from "../../@types/Game";
+import { Game } from "@/@types";
 import Image from "next/image";
 import { Checkbox } from "../ui/checkbox";
 import { DataTableColumnHeader } from "@/components/DataTable/ColumnHeader";
@@ -116,6 +116,28 @@ export const columns: ColumnDef<Game>[] = [
   {
     accessorKey: "rating",
     header: "Rating",
+    cell: ({ row }) => {
+      const { rating } = row.original;
+      const ratingColor = (rating: number) => {
+        if (rating >= 80) {
+          return "bg-green-700";
+        } else if (rating >= 60 && rating < 79) {
+          return "bg-yellow-500";
+        } else {
+          return "bg-red-500";
+        }
+      };
+      const bgColor = ratingColor(rating);
+      return (
+        <div className="hidden md:block">
+          <div
+            className={`h-10 w-10 font-bold text-white rounded-full ${bgColor} flex items-center justify-center text-lg `}
+          >
+            <span className="font-semibold text-sm ">{rating}</span>
+          </div>
+        </div>
+      );
+    },
   },
   {
     id: "actions",

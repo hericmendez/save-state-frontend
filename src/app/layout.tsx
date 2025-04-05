@@ -1,11 +1,6 @@
 import { Inter, Ubuntu_Mono, Press_Start_2P } from "next/font/google";
 import "@/styles/globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-inter",
-});
 
 const ubuntuMono = Ubuntu_Mono({
   subsets: ["latin"], //
@@ -25,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${pressStart2P.variable}`}>
+    <html lang="en" className={`${pressStart2P.variable}`}>
       <body className={ubuntuMono.className}>{children}</body>
     </html>
   );

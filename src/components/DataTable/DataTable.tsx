@@ -42,8 +42,8 @@ export function DataTable<TData, TValue>({
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
   const [rowSelection, setRowSelection] = useState({});
-  
-   const table = useReactTable({
+
+  const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
@@ -83,10 +83,7 @@ export function DataTable<TData, TValue>({
           }
           className="max-w-sm"
         />
-        <div>
-       
-
-        </div>
+        <div></div>
       </div>
       <div className="rounded-md border">
         <Table>
@@ -115,11 +112,13 @@ export function DataTable<TData, TValue>({
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
                   className={`${
-                    !row.getIsSelected() ? "transition-colors duration-1000 bg-white dark:bg-anthracite-gray" : "bg-blue-300 dark:bg-navy-blue"
+                    !row.getIsSelected()
+                      ? "transition-colors duration-1000 bg-white dark:bg-anthracite-gray"
+                      : "bg-blue-300 dark:bg-navy-blue"
                   } hover:bg-gray-200 dark:hover:bg-slate-gray cursor-pointer `}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
+                    <TableCell className="text-lg" key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
@@ -148,5 +147,3 @@ export function DataTable<TData, TValue>({
     </div>
   );
 }
-/* 
-An react application created to fetch data from the IGDB api and track my gameplay data and history. */
