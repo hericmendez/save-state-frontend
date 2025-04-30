@@ -7,26 +7,35 @@ import PageWrapper from "@/components/LayoutElements/PageWrapper";
 import MarginWidthWrapper from "@/components/LayoutElements/MarginWidthWrapper";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
-import { ReactNode, FC } from "react";
-import { useEffect } from "react";
+import { ReactNode, FC, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { GameProvider } from "@/context/GameContext";
 
 const AppLayout: FC<{ children: ReactNode }> = ({ children }) => {
   const router = useRouter();
+  /*   const [user, setUser] = useState<{ email: string } | null>(null);
+  console.log("Logged as user ==> ", user); */
 
   /*   useEffect(() => {
-    const token = localStorage.getItem("session");
+    const fetchUser = async () => {
+      try {
+        const res = await fetch("/api/me", {
+          credentials: "include", // necessário para enviar o cookie
+        });
+        console.log("res ==> ", res);
+        if (!res.ok) throw new Error("Não autenticado");
 
-    if (!token) {
-      console.log("Token ausente. Redirecionando para login.");
-      router.push("/login");
-    } else {
-      console.log("Token encontrado. Acesso permitido.");
-      // Adicione lógica de validação adicional, se necessário
-    }
-  }, []); */
+        const data = await res.json();
+        setUser(data.user);
+      } catch (err) {
+        console.log("Usuário não autenticado, redirecionando para login");
+        router.push("/login");
+      }
+    };
 
+    fetchUser();
+  }, []);
+ */
   return (
     <ThemeProvider>
       <GameProvider>

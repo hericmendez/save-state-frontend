@@ -10,7 +10,7 @@ import Image from 'next/image';
 import Logo from "@/assets/images/save_state_logo_old.png";
 export default function SideNav() {
   return (
-    <div className="transition-colors duration-1000 hidden fixed md:flex md:w-[16rem] bg-pastel-blue dark:bg-[#24292f] h-screen flex-1  border-r border-zinc-200 dark:border-slate-gray text-black dark:text-zinc-100">
+    <div className="transition-colors duration-1000 hidden fixed md:flex md:w-[20rem] bg-pastel-blue dark:bg-[#24292f] h-screen flex-1 border-zinc-200 dark:border-slate-gray text-black dark:text-zinc-100">
       <div className="flex flex-col  w-full ">
         {/* LOGO */}
         <Link

@@ -3,43 +3,39 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import axios from "axios";
+
 
 export default function LoginPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("heric.mendez00@gmail.com");
+  const [password, setPassword] = useState("teste123");
   const [error, setError] = useState("");
   const router = useRouter();
 
-  // Use `useEffect` para acessar o `document.cookie` no client-side
-
-  interface LoginResponse {
-    token: string;
-  }
-
-  const handleLogin = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
+  const handleLogin = async (
+    e: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
     e.preventDefault();
-  
-    try {
-      /*   const response = await axios.post<LoginResponse>(
-        "http://localhost:1337/login",
-        {
-          email: email,
-          password: password,
-        }
-      );
 
-            const { token } = response.data;
-  
-      // Salva o token no localStorage
-      localStorage.setItem("session", token);
-  
-      console.log("Token salvo no localStorage:", token);
-   */
-      // Redireciona para a página protegida
-      router.push("/");
-    } catch (err) {
+    try {
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+        credentials: "include", // Isso envia o cookie!
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.message);
+      }
+      console.log("login response:", response.ok);
+      // Sucesso: redireciona
+      window.location.href = "/";
+    } catch (err: any) {
       console.error("Erro ao fazer login:", err);
+      setError(err.message);
     }
   };
 
@@ -48,7 +44,9 @@ export default function LoginPage() {
       <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
         <h1 className="text-3xl font-semibold text-center mb-6">Login</h1>
         <form onSubmit={handleLogin}>
-          {error && <div className="mb-4 text-red-500 text-center">{error}</div>}
+          {error && (
+            <div className="mb-4 text-red-500 text-center">{error}</div>
+          )}
           <input
             type="email"
             placeholder="Email"
@@ -76,7 +74,7 @@ export default function LoginPage() {
             Registre-se
           </Link>
         </p>
-{/*         <p className="mt-2 text-xs text-center text-gray-500 break-all">
+        {/*         <p className="mt-2 text-xs text-center text-gray-500 break-all">
           Localstorage: {localStorage?.session || "Nenhum token encontrado"}
         </p> */}
       </div>

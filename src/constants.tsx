@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react';
-import { SideNavItem } from './types';
+import { SideNavItem } from "@/@types";
 
 export const SIDENAV_ITEMS: SideNavItem[] = [
   {
@@ -65,6 +65,17 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     title: "Preferências",
     path: "/settings",
     icon: <Icon icon="lucide:cog" width="24" height="24" />,
+    submenu: true,
+    subMenuItems: [
+      {
+        title: "Minha conta",
+        path: "#",
+      },
+      {
+        title: "Configurações do App",
+        path: "/search/platform",
+      },
+    ],
   },
   /*  {
     title: "Work in progress",
