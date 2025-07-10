@@ -1,15 +1,20 @@
+// components/ui/hybrid-view.tsx
 import React, { useState } from "react";
-import { Switch, Button, Input, Select } from "antd";
-import TableView from "./TableView";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Switch } from "@/components/ui/switch";
+// import { Pagination } from "@/components/ui/pagination";
+import CustomPagination from "@/components/ui/custom-pagination";
 import GridView from "./GridView";
-import { DataItem, DataItemWithKey, Field, GameField, GameWithKey } from "@/@types";
-
-const { Search } = Input;
-const { Option } = Select;
-
-
-
-
+import TableView from "./TableView";
+import type { GameWithKey, GameField } from "@/@types";
 
 interface HybridViewProps {
   data: GameWithKey[];
@@ -17,88 +22,96 @@ interface HybridViewProps {
 }
 
 const HybridView: React.FC<HybridViewProps> = ({ data, fields }) => {
-  const [isGrid, setIsGrid] = useState<boolean>(false);
+  const [isGrid, setIsGrid] = useState(false);
   const [selectedKeys, setSelectedKeys] = useState<number[]>([]);
-  const [searchText, setSearchText] = useState<string>("");
+  const [searchText, setSearchText] = useState("");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const [pageSize, setPageSize] = useState<number>(10);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(10);
 
-  // Filtra os dados com base no nome
   const filteredData = data
-    .filter((item) => item.name.toLowerCase().includes(searchText.toLowerCase()))
+    .filter((item) =>
+      item.name.toLowerCase().includes(searchText.toLowerCase())
+    )
     .sort((a, b) =>
-      sortOrder === "asc" ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name)
+      sortOrder === "asc"
+        ? a.name.localeCompare(b.name)
+        : b.name.localeCompare(a.name)
     );
 
-  // Paginação
-  const paginatedData = filteredData.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+  const paginatedData = filteredData.slice(
+    (currentPage - 1) * pageSize,
+    currentPage * pageSize
+  );
 
   const handleSelectionChange = (keys: number[]) => {
     setSelectedKeys(keys);
-    console.log("Itens selecionados:", data.filter((item) => keys.includes(item.key as number)));
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <div className="flex justify-between items-start mb-4" >
-        <div>
-        <Search
+    <div className="p-4 space-y-4">
+      <div className="flex flex-wrap gap-4 items-center">
+        <Input
+          className="w-full sm:w-1/2"
           placeholder="Buscar por nome"
-          allowClear
-          onSearch={(value) => setSearchText(value)}
-          style={{ width: '50%', marginRight: 10, backgroundColor: '#25262b' }}
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
         />
 
-        <Select      style={{ width: '20%', marginRight: 10 }} value={sortOrder} onChange={(value) => setSortOrder(value)}>
-          <Option value="asc">Ascendente</Option>
-          <Option value="desc">Descendente</Option>
+        <Select
+          value={sortOrder}
+          onValueChange={(v) => setSortOrder(v as "asc" | "desc")}
+        >
+          <SelectTrigger className="w-[180px]">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="asc">Ascendente</SelectItem>
+            <SelectItem value="desc">Descendente</SelectItem>
+          </SelectContent>
         </Select>
 
-        <Select       style={{ width: '20%', marginRight: 10 }} value={pageSize} onChange={(value) => setPageSize(value)}>
-          <Option value={10}>10 por página</Option>
-          <Option value={20}>20 por página</Option>
-          <Option value={30}>30 por página</Option>
+        <Select
+          value={pageSize.toString()}
+          onValueChange={(v) => setPageSize(Number(v))}
+        >
+          <SelectTrigger className="w-[180px]">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="10">10 por página</SelectItem>
+            <SelectItem value="20">20 por página</SelectItem>
+            <SelectItem value="30">30 por página</SelectItem>
+          </SelectContent>
         </Select>
 
-      <Switch
-          checked={isGrid}
-          onChange={() => setIsGrid(!isGrid)}
-          checkedChildren="Grid"
-          unCheckedChildren="Tabela"
-          style={{ marginTop: 10 }}
-          
-        />
+        <div className="flex items-center gap-2">
+          <Switch checked={isGrid} onCheckedChange={setIsGrid} />
+          <span>{isGrid ? "Grid" : "Tabela"}</span>
         </div>
 
         <Button
-        type="primary"
-     
-        onClick={() => console.log("Exportar:", data.filter((item) => selectedKeys.includes(item.key as number)))}
-      >
-        Exportar Selecionados
-      </Button>
-        
+          onClick={() =>
+            console.log(
+              "Exportar:",
+              data.filter((item) => selectedKeys.includes(item.key as number))
+            )
+          }
+        >
+          Exportar Selecionados
+        </Button>
       </div>
 
-      {/* Informações sobre a paginação e seleção */}
-      <div style={{ marginBottom: 10 }}>
-        <span>
-          Mostrando {paginatedData.length} de {filteredData.length} registros | 
-          Selecionados: {selectedKeys.length}
-        </span>
+      <div className="text-sm text-muted-foreground">
+        Mostrando {paginatedData.length} de {filteredData.length} registros |
+        Selecionados: {selectedKeys.length}
       </div>
 
       {isGrid ? (
         <GridView
           data={paginatedData}
-          fields={fields}
           selectedKeys={selectedKeys}
           onSelectionChange={handleSelectionChange}
-          currentPage={currentPage}
-          onPageChange={setCurrentPage}
-          totalItems={filteredData.length}
-          pageSize={pageSize}
         />
       ) : (
         <TableView
@@ -107,13 +120,11 @@ const HybridView: React.FC<HybridViewProps> = ({ data, fields }) => {
           selectedKeys={selectedKeys}
           onSelectionChange={handleSelectionChange}
           currentPage={currentPage}
-          onPageChange={setCurrentPage}
-          totalItems={filteredData.length}
           pageSize={pageSize}
+          totalItems={filteredData.length}
+          onPageChange={setCurrentPage}
         />
       )}
-
-
     </div>
   );
 };
