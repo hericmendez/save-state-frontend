@@ -1,0 +1,131 @@
+Layout/
+    ├── .env.local
+    ├── .eslintrc.json
+    ├── .gitignore
+    ├── README.md
+    ├── components.json
+    ├── generate-tree.js
+    ├── next-env.d.ts
+    ├── next.config.mjs
+    ├── package-lock.json
+    ├── package.json
+    ├── pnpm-lock.yaml
+    ├── pnpm-workspace.yaml
+    ├── postcss.config.mjs
+    ├── src/
+    │   ├── @types/
+    │   │   └── index.tsx
+    │   ├── app/
+    │   │   ├── (app)/
+    │   │   │   ├── backlog/
+    │   │   │   │   └── [list_name]/
+    │   │   │   │       └── page.tsx
+    │   │   │   ├── dashboard/
+    │   │   │   │   └── page.tsx
+    │   │   │   ├── games/
+    │   │   │   │   ├── backlog/
+    │   │   │   │   │   └── page.tsx
+    │   │   │   │   ├── dropped/
+    │   │   │   │   │   └── page.tsx
+    │   │   │   │   ├── favorites/
+    │   │   │   │   │   └── page.tsx
+    │   │   │   │   ├── finished/
+    │   │   │   │   │   └── page.tsx
+    │   │   │   │   ├── page.tsx
+    │   │   │   │   └── playing/
+    │   │   │   │       └── page.tsx
+    │   │   │   ├── layout.tsx
+    │   │   │   ├── page.tsx
+    │   │   │   ├── resources/
+    │   │   │   │   └── page.tsx
+    │   │   │   ├── search/
+    │   │   │   │   ├── [search_by]/
+    │   │   │   │   │   └── page.tsx
+    │   │   │   │   └── page.tsx
+    │   │   │   └── settings/
+    │   │   │       └── page.tsx
+    │   │   ├── (auth)/
+    │   │   │   ├── login/
+    │   │   │   │   └── page.tsx
+    │   │   │   └── register/
+    │   │   │       └── page.tsx
+    │   │   ├── api/
+    │   │   │   ├── auth/
+    │   │   │   │   ├── login/
+    │   │   │   │   │   └── route.ts
+    │   │   │   │   ├── logout/
+    │   │   │   │   │   └── route.ts
+    │   │   │   │   └── register/
+    │   │   │   │       └── route.ts
+    │   │   │   └── me/
+    │   │   │       └── route.ts
+    │   │   ├── favicon.ico
+    │   │   └── layout.tsx
+    │   ├── assets/
+    │   │   └── images/
+    │   │       ├── game_cover_placholder.png
+    │   │       ├── game_disc.png
+    │   │       ├── logo_alt.png
+    │   │       ├── save_state_logo_floppy.png
+    │   │       ├── save_state_logo_old.png
+    │   │       ├── save_state_logo_ps1_transparent_no_text.png
+    │   │       └── user.png
+    │   ├── components/
+    │   │   ├── Antd/
+    │   │   │   ├── GridView.tsx
+    │   │   │   ├── HybridView.tsx
+    │   │   │   └── TableView.tsx
+    │   │   ├── Buttons/
+    │   │   │   ├── LogoutButton.tsx
+    │   │   │   └── ThemeToggle.tsx
+    │   │   ├── DataTable/
+    │   │   │   ├── ColumnHeader.tsx
+    │   │   │   ├── Columns.tsx
+    │   │   │   ├── DataTable.tsx
+    │   │   │   ├── DropdownMenu.tsx
+    │   │   │   ├── Pagination.tsx
+    │   │   │   └── ViewOptions.tsx
+    │   │   ├── DrawerModal/
+    │   │   │   └── index.tsx
+    │   │   ├── LayoutElements/
+    │   │   │   ├── Header.tsx
+    │   │   │   ├── HeaderMobile.tsx
+    │   │   │   ├── MarginWidthWrapper.tsx
+    │   │   │   ├── PageWrapper.tsx
+    │   │   │   └── SideNav.tsx
+    │   │   └── ui/
+    │   │       ├── button.tsx
+    │   │       ├── card.tsx
+    │   │       ├── checkbox.tsx
+    │   │       ├── custom-pagination.tsx
+    │   │       ├── dropdown-menu.tsx
+    │   │       ├── input.tsx
+    │   │       ├── select.tsx
+    │   │       ├── switch.tsx
+    │   │       └── table.tsx
+    │   ├── constants.tsx
+    │   ├── context/
+    │   │   ├── AuthContext.tsx
+    │   │   ├── GameContext.tsx
+    │   │   ├── ThemeContext.tsx
+    │   │   └── ThemeLoader.tsx
+    │   ├── data.ts
+    │   ├── hooks/
+    │   │   ├── useAuth.tsx
+    │   │   ├── useKeypress.tsx
+    │   │   ├── useLogout.tsx
+    │   │   ├── useOutsideClick.tsx
+    │   │   └── useScroll.tsx
+    │   ├── lib/
+    │   │   ├── mongoose.ts
+    │   │   └── utils.ts
+    │   ├── middleware.ts
+    │   ├── models/
+    │   │   └── User.ts
+    │   ├── styles/
+    │   │   └── globals.css
+    │   ├── types.tsx
+    │   └── utils/
+    │       ├── cn.tsx
+    │       └── jwt.ts
+    └── tsconfig.json

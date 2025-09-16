@@ -1,40 +1,53 @@
-"use client"; // Certifique-se de que este comando está no início do arquivo
+// src/app/(auth)/login/page.tsx
+"use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-
+import axios from "axios";
+import Cookies from "js-cookie";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState("heric.mendez00@gmail.com");
-  const [password, setPassword] = useState("teste123");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const router = useRouter();
 
-  const handleLogin = async (
-    e: React.FormEvent<HTMLFormElement>
-  ): Promise<void> => {
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError("");
 
     try {
-      const response = await fetch("/api/auth/login", {
+      const response = await axios(`${process.env.NEXT_PUBLIC_API_URL}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
-        credentials: "include", // Isso envia o cookie!
-      });
+        data: { email, password },
 
-      if (!response.ok) {
-        const data = await response.json();
-        throw new Error(data.message);
+      });
+      const data = response.data
+      const { access_token, username } = response.data;
+      console.log("access_token, username ==> ", access_token, username);
+      console.log("response.data ==> ", response);
+      if (response.status !== 201) {
+        throw new Error(data.message || "Erro no login");
       }
-      console.log("login response:", response.ok);
-      // Sucesso: redireciona
-      window.location.href = "/";
+
+      Cookies.set("token", access_token, {
+        expires: 7,
+        path: "/",
+        sameSite: "lax",
+        secure: process.env.NODE_ENV === "production",
+      });
+      Cookies.set("username", username, {
+        expires: 7,
+        path: "/",
+        sameSite: "lax",
+        secure: process.env.NODE_ENV === "production",
+      });
+      router.push("/"); // redireciona para home
     } catch (err: any) {
-      console.error("Erro ao fazer login:", err);
       setError(err.message);
     }
   };
@@ -74,9 +87,6 @@ export default function LoginPage() {
             Registre-se
           </Link>
         </p>
-        {/*         <p className="mt-2 text-xs text-center text-gray-500 break-all">
-          Localstorage: {localStorage?.session || "Nenhum token encontrado"}
-        </p> */}
       </div>
     </div>
   );

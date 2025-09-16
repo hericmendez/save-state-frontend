@@ -3,83 +3,60 @@ import { SideNavItem } from "@/@types";
 
 export const SIDENAV_ITEMS: SideNavItem[] = [
   {
-    title: "Home",
+    name: "Home",
     path: "/",
     icon: <Icon icon="lucide:home" width="24" height="24" />,
   },
+
   {
-    title: "Estatísticas",
-    path: "/dashboard",
-    icon: <Icon icon="lucide:chart-column" width="24" height="24" />,
-  },
-  {
-    title: "Meus Jogos",
+    name: "Meu Backlog",
     path: "/games",
     icon: <Icon icon="lucide:gamepad-2" width="24" height="24" />,
     submenu: true,
     subMenuItems: [
-      {
-        title: "Favoritos",
 
-        path: "/games/favorites",
-      },
-      {
-        title: "Jogando",
-        path: "/games/playing",
-      },
-      {
-        title: "Zerados",
-        path: "/games/finished",
-      },
-      {
-        title: "Na fila",
-        path: "/games/backlog",
-      },
-      {
-        title: "Dropados",
-        path: "/games/dropped",
-      },
+
     ],
   },
-  {
-    title: "Buscar Jogos",
+/*   {
+    name: "Buscar Jogos",
     path: "/to-do",
     icon: <Icon icon="lucide:search" width="24" height="24" />,
     submenu: true,
     subMenuItems: [
       {
-        title: "Por título",
-        path: "/search/title",
+        name: "Por título",
+        path: "/search",
+        id: "title",
       },
       {
-        title: "Por plataforma",
-        path: "/search/platform",
+        name: "Por plataforma",
+        path: "/search",
+        id: "platform",
       },
       {
-        title: "Por data de lançamento",
-        path: "/search/release_date",
+        name: "Por gênero",
+        path: "/search",
+        id: "genre",
       },
     ],
-  },
+  }, */
   {
-    title: "Preferências",
+    name: "Preferências",
     path: "/settings",
     icon: <Icon icon="lucide:cog" width="24" height="24" />,
     submenu: true,
     subMenuItems: [
       {
-        title: "Minha conta",
+        name: "Minha conta",
         path: "#",
       },
       {
-        title: "Configurações do App",
-        path: "/search/platform",
+        name: "Configurações do App",
+        path: "",
+        id: "loading"
       },
     ],
   },
-  /*  {
-    title: "Work in progress",
-    path: "/work-in-progress",
-    icon: <Icon icon="lucide:construction" width="24" height="24" />,
-  }, */
+
 ];

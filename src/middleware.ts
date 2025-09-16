@@ -1,61 +1,47 @@
-import { NextRequest, NextResponse } from "next/server";
-import { verifyToken } from "@/utils/jwt";
-import jwt from "jsonwebtoken";
+// src/middleware.ts
 
-export default async function middleware(request: NextRequest) {
+
+
+
+import { NextRequest, NextResponse } from 'next/server'
+
+
+
+
+export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // 1) Se for rota de API, deixa passar
-  if (pathname.startsWith("/api/")) {
+  const PUBLIC_ROUTES = ["/login", "/register"];
+const isPublicRoute = PUBLIC_ROUTES.some(r => pathname.startsWith(r))
+
+
+
+
+
+const token = request.cookies.get('token')
+console.log("token middleware==> ", token);
+
+
+  // 🔑 Se está em rota pública, nunca redireciona por causa do cookie
+  if (isPublicRoute) {
     return NextResponse.next();
   }
 
-  // 2) Define rotas públicas
-  const PUBLIC_ROUTES = ["/login", "/register"];
-  const isPublicRoute = PUBLIC_ROUTES.some((r) => pathname.startsWith(r));
-  //console.log("isPublicRoute ==> ", isPublicRoute);
-
-  // 3) Lê o token do cookie
-  const token = request.cookies.get("token")?.value;
-  //console.log("token ==> ", token);
-
-  // 4) Usuário logado tentando acessar login/register → envia para home
-  if (isPublicRoute && token) {
-    return NextResponse.redirect(new URL("/", request.url));
-  }
-
-  // 5) Usuário não logado tentando acessar rota protegida → envia para login
-  if (!isPublicRoute && !token) {
+  // Se não é rota pública e não tem token, joga pro login
+  if (!token) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
-  // 6) Se tiver token, verifica validade
-  if (token) {
-    await console.log("middleware token ==> ", token);
+// Se tem token → deixa passar (validação real acontece no backend)
 
-    const payload = await verifyToken(token);
-    console.log("payload ==> ", payload);
 
-    if (!payload) {
-      return NextResponse.redirect(new URL("/login", request.url));
-    }
-    // Token ok → segue
-    return NextResponse.next();
-  }
 
-  // 7) Padrão: libera
+
   return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-    /*
-     * Aplica o middleware a tudo, exceto:
-     * - estáticos do Next
-     * - imagens
-     * - favicon, robots, sitemap
-     * - rotas de API
-     */
-    "/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|api/).*)",
+    "/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)",
   ],
 };

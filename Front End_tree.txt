@@ -1,0 +1,116 @@
+Front End/
+    ├── .env.local
+    ├── .eslintrc.json
+    ├── .gitignore
+    ├── Layout_tree.txt
+    ├── README.md
+    ├── Spinning-Floppy-Disk-128.gif
+    ├── components.json
+    ├── data.js
+    ├── generate-tree.js
+    ├── next-env.d.ts
+    ├── next.config.mjs
+    ├── package-lock.json
+    ├── package.json
+    ├── pnpm-lock.yaml
+    ├── pnpm-workspace.yaml
+    ├── postcss.config.mjs
+    ├── src/
+    │   ├── @types/
+    │   │   └── index.tsx
+    │   ├── app/
+    │   │   ├── (app)/
+    │   │   │   ├── backlog/
+    │   │   │   │   └── [id]/
+    │   │   │   │       └── page.tsx
+    │   │   │   ├── layout.tsx
+    │   │   │   ├── page.tsx
+    │   │   │   ├── search/
+    │   │   │   │   ├── [query]/
+    │   │   │   │   │   └── page.tsx
+    │   │   │   │   └── page.tsx
+    │   │   │   └── settings/
+    │   │   │       └── page.tsx
+    │   │   ├── (auth)/
+    │   │   │   ├── login/
+    │   │   │   │   └── page.tsx
+    │   │   │   └── register/
+    │   │   │       └── page.tsx
+    │   │   ├── favicon.ico
+    │   │   └── layout.tsx
+    │   ├── assets/
+    │   │   └── images/
+    │   │       ├── Spinning-Floppy-Disk-128.gif
+    │   │       ├── game_cover_placholder.png
+    │   │       ├── game_disc.png
+    │   │       ├── logo_alt.png
+    │   │       ├── logo_ultimate.png
+    │   │       ├── save_state_logo_floppy.png
+    │   │       ├── save_state_logo_memorycard.png
+    │   │       ├── save_state_logo_memorycard_color.png
+    │   │       ├── save_state_logo_old.png
+    │   │       ├── save_state_logo_ps1_transparent_no_text.png
+    │   │       └── user.png
+    │   ├── auth/
+    │   ├── components/
+    │   │   ├── Buttons/
+    │   │   │   ├── LogoutButton.tsx
+    │   │   │   └── ThemeToggle.tsx
+    │   │   ├── DrawerModal/
+    │   │   │   ├── GameContent.tsx
+    │   │   │   └── index.tsx
+    │   │   ├── HybridView/
+    │   │   │   ├── ContextMenu.tsx
+    │   │   │   ├── GridView.tsx
+    │   │   │   ├── HybridView.tsx
+    │   │   │   └── TableView.tsx
+    │   │   ├── LayoutElements/
+    │   │   │   ├── Dashboard.tsx
+    │   │   │   ├── Drawer.tsx
+    │   │   │   ├── Header.tsx
+    │   │   │   ├── HeaderMobile.tsx
+    │   │   │   ├── InlineEdit.tsx
+    │   │   │   ├── LoadingOverlay.tsx
+    │   │   │   ├── MarginWidthWrapper.tsx
+    │   │   │   ├── Modal.tsx
+    │   │   │   ├── PageWrapper.tsx
+    │   │   │   ├── SearchInput.tsx
+    │   │   │   └── SideNav.tsx
+    │   │   └── ui/
+    │   │       └── card.tsx
+    │   ├── constants.tsx
+    │   ├── context/
+    │   │   ├── GameContext.tsx
+    │   │   ├── ThemeContext.tsx
+    │   │   ├── ThemeLoader.tsx
+    │   │   └── ui/
+    │   │       ├── button.tsx
+    │   │       ├── card.tsx
+    │   │       ├── checkbox.tsx
+    │   │       ├── custom-pagination.tsx
+    │   │       ├── dropdown-menu.tsx
+    │   │       ├── input.tsx
+    │   │       ├── select.tsx
+    │   │       ├── switch.tsx
+    │   │       └── table.tsx
+    │   ├── data.ts
+    │   ├── hooks/
+    │   │   ├── useAuth.tsx
+    │   │   ├── useCategoryStore.ts
+    │   │   ├── useKeypress.tsx
+    │   │   ├── useLogout.tsx
+    │   │   ├── useOutsideClick.tsx
+    │   │   └── useScroll.tsx
+    │   ├── lib/
+    │   │   ├── api.ts
+    │   │   └── utils.ts
+    │   ├── middleware.ts
+    │   ├── store/
+    │   │   ├── categories.ts
+    │   │   └── search-store.ts
+    │   ├── styles/
+    │   │   └── globals.css
+    │   ├── types.tsx
+    │   └── utils/
+    │       └── cn.tsx
+    └── tsconfig.json

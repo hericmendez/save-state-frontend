@@ -15,10 +15,12 @@ export type Game = {
 };
 
 export type SideNavItem = {
-  title: string;
+  id?: string;
+  name: string;
   path: string;
   icon?: JSX.Element;
   submenu?: boolean;
+  count?: number;
   subMenuItems?: SideNavItem[];
 };
 

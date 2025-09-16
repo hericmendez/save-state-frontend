@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-    serverActions: true,
-    enableUndiciCookies: true, // permite cookies em fetch do App Router
-  },
-};
+  experimental: {},
+  images: {
+    remotePatterns: [
+      { 
+        protocol: 'https', 
+        hostname: 'images.igdb.com' 
+      }
+    ]
+  }
+}
 
-export default nextConfig;
+export default nextConfig
+

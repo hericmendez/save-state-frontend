@@ -1,9 +1,10 @@
 "use client";
 
+import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const useLogout=()=> {
+const useLogout = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -12,15 +13,12 @@ const useLogout=()=> {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("/api/auth/logout", {
-        method: "POST",
-        credentials: "include",
-      });
-      if (!res.ok) {
-        throw new Error(`Falha no logout (${res.status})`);
-      }
-      // Redireciona para login
-      router.push("/login");
+      // remove token salvo
+      Cookies.remove("token");
+      Cookies.remove("username");
+
+      // redireciona
+      window.location.href = ("/login");
     } catch (err: any) {
       console.error("Erro no logout", err);
       setError(err.message);
@@ -30,6 +28,6 @@ const useLogout=()=> {
   }
 
   return { logout, loading, error };
-}
+};
 
 export default useLogout;
