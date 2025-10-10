@@ -3,7 +3,7 @@
 import { Input } from "@/context/ui/input"
 import { Button } from "@/context/ui/button"
 import { Search } from "lucide-react"
-import { useSearchStore } from "@/store/search-store"
+import { useSearchStore } from "@/store/useSearchStore"
 import { useRouter } from "next/navigation"
 export function SearchInput() {
   const { query, setQuery } = useSearchStore()

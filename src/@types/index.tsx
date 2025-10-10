@@ -10,19 +10,22 @@ export type Game = {
   rating: number;
   developer: string;
   description?: string;
-  cover?: string;
+  cover?: { url: string };
 
 };
 
-export type SideNavItem = {
-  id?: string;
-  name: string;
-  path: string;
-  icon?: JSX.Element;
-  submenu?: boolean;
-  count?: number;
-  subMenuItems?: SideNavItem[];
-};
+export interface SideNavItem {
+  id?: string
+  name: string | React.ReactNode
+  path: string
+  icon?: React.ReactNode
+  submenu?: boolean
+  subMenuItems?: SideNavItem[]
+  hasContextMenu?: boolean
+  isComponent?: boolean
+  count?: number | null
+}
+
 
 export type MenuItemWithSubMenuProps = {
   item: SideNavItem;

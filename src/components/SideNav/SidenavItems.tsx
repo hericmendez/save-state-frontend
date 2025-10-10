@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react';
 import { SideNavItem } from "@/@types";
+import CategoryModal from '../LayoutElements/SaveCategoryModal';
 
 export const SIDENAV_ITEMS: SideNavItem[] = [
   {
@@ -7,7 +8,11 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     path: "/",
     icon: <Icon icon="lucide:home" width="24" height="24" />,
   },
-
+  {
+    name: "Estatísticas",
+    path: "/dashboard",
+    icon: <Icon icon="lucide:chart-spline" width="24" height="24" />,
+  },
   {
     name: "Meu Backlog",
     path: "/games",
@@ -16,31 +21,9 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     subMenuItems: [
 
 
+
     ],
   },
-/*   {
-    name: "Buscar Jogos",
-    path: "/to-do",
-    icon: <Icon icon="lucide:search" width="24" height="24" />,
-    submenu: true,
-    subMenuItems: [
-      {
-        name: "Por título",
-        path: "/search",
-        id: "title",
-      },
-      {
-        name: "Por plataforma",
-        path: "/search",
-        id: "platform",
-      },
-      {
-        name: "Por gênero",
-        path: "/search",
-        id: "genre",
-      },
-    ],
-  }, */
   {
     name: "Preferências",
     path: "/settings",

@@ -17,6 +17,8 @@ export const useCategoryStore = create<CategoryState>((set) => ({
     set({ loading: true, error: null })
     try {
       const response = await api.get("/categories")
+console.log('response from useCategoryStore ==> ', response)
+
       set({ categories: response.data, loading: false })
     } catch (err: any) {
       set({ error: err.message ?? "Erro ao carregar categorias", loading: false })

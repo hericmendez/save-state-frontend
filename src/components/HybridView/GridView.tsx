@@ -1,84 +1,69 @@
 "use client";
 
 import React from "react";
-import { Checkbox } from "@/context/ui/checkbox";
-import imgPlaceholder from "@/assets/images/game_cover_placholder.png";
-import type { GameWithKey } from "@/@types";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import CustomContextMenu, { ContextMenuItemType } from "./ContextMenu";
 
-interface GridViewProps {
-  data: GameWithKey[];
-  selectedKeys: number[];
-  onSelectionChange: (keys: number[]) => void;
-  onContextMenu?: (e: React.MouseEvent, game: GameWithKey) => void;
+interface GridViewProps<T> {
+  data: T[];
+  selectedKeys: React.Key[];
+  toggleSelection: (item: T) => void;
+  renderContextMenu?: (
+    item: T,
+    selectedKeys: React.Key[],
+    toggleSelection: (item: T) => void
+  ) => ContextMenuItemType[];
 }
 
-const GridView: React.FC<GridViewProps> = ({
+export default function GridView<T extends { key: React.Key; title?: string; cover: { url: string } }>({
   data,
   selectedKeys,
-  onSelectionChange,
-  onContextMenu,
-}) => {
-  const handleCheckboxChange = (key: number, checked: boolean) => {
-    const newSelectedKeys = checked
-      ? [...selectedKeys, key]
-      : selectedKeys.filter((k) => k !== key);
-    onSelectionChange(newSelectedKeys);
-  };
-
-  const toggleSelection = (game: GameWithKey) => {
-    const isSelected = selectedKeys.includes(game?.key as number);
-    handleCheckboxChange(game?.key as number, !isSelected);
-  };
-
+  toggleSelection,
+  renderContextMenu,
+}: GridViewProps<T>) {
   return (
-    <div className="relative">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-8 gap-4">
-        {data?.map((game, index) => {
-          const isSelected = selectedKeys.includes(game?.key as number);
-          const key = `grid-${game?.key ?? index}`;
-          return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      {data.map((game) => {
+        const isSelected = selectedKeys.includes(game.key);
+
+        return (
+          <CustomContextMenu
+            key={game.key}
+            items={renderContextMenu?.(game, selectedKeys, toggleSelection) ?? []}
+          >
             <div
-              key={key}
-              className={`relative rounded-lg overflow-hidden border transition-transform duration-300 ease-in-out cursor-pointer group ${
-                isSelected ? "border-primary scale-105" : "border-muted hover:scale-[1.02]"
+              className={`relative rounded-lg overflow-hidden border cursor-pointer group transition-transform duration-200 ${isSelected
+                ? "border-primary scale-105"
+                : "border-muted hover:scale-[1.02]"
               }`}
               onClick={() => toggleSelection(game)}
-              onContextMenu={(e) => onContextMenu?.(e, game)}
             >
-              <Checkbox
-                className="absolute z-20 left-2 top-2"
-                style={{ display: "none" }}
-                checked={isSelected}
-                onCheckedChange={(checked) =>
-                  handleCheckboxChange(game?.key as number, !!checked)
-                }
-                onClick={(e) => e.stopPropagation()}
-              />
+              {game.cover && (
+                <Image
+                  src={game.cover?.url?.startsWith("//") ? `https:${game.cover.url}` : game.cover.url}
+                  alt={game.title ?? "Game Cover"}
+                  width={400}
+                  height={400}
+                  className="w-full aspect-[3/4] object-cover"
+                />
 
-              <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
-                <div className="p-4 text-lg relative z-20 bg-background rounded">
-                  <h3 className="font-bold">{game.name}</h3>
-                  <p className="text-slate-400">
-                    {game.genres?.map((g) => g.name).join(", ")}
-                  </p>
-                  {game.platforms && (
-                    <p>Plataformas: {game.platforms.map((p) => p.name).join(", ")}</p>
-                  )}
-                </div>
-              </div>
 
-              {!game.cover && (
-                <span className="absolute text-center font-bold top-1/2 z-20 w-full text-white">
-                  {game.name}
-                </span>
               )}
-              <img src={(game.cover && game.cover.url) || imgPlaceholder.src} alt="cover" className="w-full object-cover" />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
+                <p className="text-white text-sm font-medium truncate">{game.title}</p>
+              </div>
+              <Button
+                size="icon"
+                variant={isSelected ? "secondary" : "ghost"}
+                className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                {isSelected ? "✓" : "+"}
+              </Button>
             </div>
-          );
-        })}
-      </div>
+          </CustomContextMenu>
+        );
+      })}
     </div>
   );
-};
-
-export default GridView;
+}
