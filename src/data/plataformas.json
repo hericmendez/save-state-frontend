@@ -1,0 +1,633 @@
+[
+    {
+        "id": 1,
+        "periodo": "Primeira Geração (1972-1978)",
+        "plataformas": [
+            {
+                "nome": "Magnavox Odyssey",
+                "ano_lancamento": 1972,
+                "empresa": "Magnavox",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Magnavox_Odyssey",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Pong",
+                "ano_lancamento": 1975,
+                "empresa": "Atari",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Pong_(jogo_eletr%C3%B4nico)",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Philips Tele-Spiel",
+                "ano_lancamento": 1975,
+                "empresa": "Philips",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Philips_Tele-Spiel",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Coleco Telstar",
+                "ano_lancamento": 1976,
+                "empresa": "Coleco",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Coleco_Telstar",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Color TV Game",
+                "ano_lancamento": 1977,
+                "empresa": "Nintendo",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Color_TV_Game",
+                "variantes": [],
+                "versoes_alternativas": []
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "periodo": "Segunda Geração (1976-1984)",
+        "plataformas": [
+            {
+                "nome": "Fairchild Channel F",
+                "ano_lancamento": 1976,
+                "empresa": "Fairchild",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Fairchild_Channel_F",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Atari 2600",
+                "ano_lancamento": 1977,
+                "empresa": "Atari",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Atari_2600",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Atari 2800",
+                    "Atari 5200",
+                    "Atari 7800"
+                ]
+            },
+            {
+                "nome": "Bally Astrocade",
+                "ano_lancamento": 1977,
+                "empresa": "Midway",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Bally_Astrocade",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Intellivision",
+                "ano_lancamento": 1980,
+                "empresa": "Mattel",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Intellivision",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "PlayCable"
+                ]
+            },
+            {
+                "nome": "Vectrex",
+                "ano_lancamento": 1982,
+                "empresa": "Entex",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Vectrex",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "ColecoVision",
+                "ano_lancamento": 1982,
+                "empresa": "Coleco",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/ColecoVision",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Coleco Gemini",
+                    "Coleco MAX Machine"
+                ]
+            },
+            {
+                "nome": "Sega SG-1000",
+                "ano_lancamento": 1983,
+                "empresa": "Sega",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Sega_SG-1000",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Magnavox Odyssey²",
+                "ano_lancamento": 1978,
+                "empresa": "Magnavox/Philips",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Magnavox_Odyssey%C2%B2",
+                "variantes": [],
+                "versoes_alternativas": []
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "periodo": "Terceira Geração (1983-1990)",
+        "plataformas": [
+            {
+                "nome": "NES/Famicom",
+                "ano_lancamento": 1983,
+                "empresa": "Nintendo",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Nintendo_Entertainment_System",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Phantom System",
+                    "Top Game/Turbo Game",
+                    "Dynavision 2",
+                    "Hi-Top Game",
+                    "Prosystem-8",
+                    "Action Max"
+                ]
+            },
+            {
+                "nome": "Master System",
+                "ano_lancamento": 1987,
+                "empresa": "Sega",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Master_System",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Game Gear"
+                ]
+            },
+            {
+                "nome": "Game Boy",
+                "ano_lancamento": 1989,
+                "empresa": "Nintendo",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Game_Boy",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Game Boy Color"
+                ]
+            },
+            {
+                "nome": "Atari 7800",
+                "ano_lancamento": 1986,
+                "empresa": "Atari",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Atari_7800",
+                "variantes": [],
+                "versoes_alternativas": []
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "periodo": "Quarta Geração (1987-1996)",
+        "plataformas": [
+            {
+                "nome": "PC Engine/TurboGrafx-16",
+                "ano_lancamento": 1987,
+                "empresa": "NEC",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/PC_Engine",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "TurboExpress"
+                ]
+            },
+            {
+                "nome": "Mega Drive/Genesis",
+                "ano_lancamento": 1988,
+                "empresa": "Sega",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Mega_Drive",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Genesis CDX",
+                    "Wonder Mega"
+                ]
+            },
+            {
+                "nome": "Neo-Geo",
+                "ano_lancamento": 1990,
+                "empresa": "SNK",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Neo_Geo",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Neo-Geo CD"
+                ]
+            },
+            {
+                "nome": "Super Nintendo/Super Famicom",
+                "ano_lancamento": 1990,
+                "empresa": "Nintendo",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Super_Nintendo_Entertainment_System",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Super A'Can"
+                ]
+            },
+            {
+                "nome": "Atari Lynx",
+                "ano_lancamento": 1989,
+                "empresa": "Atari",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Atari_Lynx",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Handhelds compatíveis ou clones regionais"
+                ]
+            },
+            {
+                "nome": "Supervision",
+                "ano_lancamento": 1992,
+                "empresa": "Watara",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Watara_Supervision",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Mega Duck/Cougar Boy",
+                "ano_lancamento": 1993,
+                "empresa": "Creatonic/Timlex/Videojet",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Mega_Duck",
+                "variantes": [],
+                "versoes_alternativas": []
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "periodo": "Quinta Geração (1993-1999)",
+        "plataformas": [
+            {
+                "nome": "3DO",
+                "ano_lancamento": 1993,
+                "empresa": "Panasonic/Sanyo/GoldStar",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/3DO",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Sega Saturn",
+                "ano_lancamento": 1994,
+                "empresa": "Sega",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Sega_Saturn",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "PlayStation",
+                "ano_lancamento": 1994,
+                "empresa": "Sony",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/PlayStation_(console)",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "PlayStation TV",
+                    "PSX"
+                ]
+            },
+            {
+                "nome": "Nintendo 64",
+                "ano_lancamento": 1996,
+                "empresa": "Nintendo",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Nintendo_64",
+                "variantes": [],
+                "versoes_alternativas": []
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "periodo": "Sexta Geração (1998-2006)",
+        "plataformas": [
+            {
+                "nome": "Dreamcast",
+                "ano_lancamento": 1998,
+                "empresa": "Sega",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Sega_Dreamcast",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "PlayStation 2",
+                "ano_lancamento": 2000,
+                "empresa": "Sony",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/PlayStation_2",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "PSX",
+                    "Panasonic Q"
+                ]
+            },
+            {
+                "nome": "GameCube",
+                "ano_lancamento": 2001,
+                "empresa": "Nintendo",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Nintendo_GameCube",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Xbox",
+                "ano_lancamento": 2001,
+                "empresa": "Microsoft",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Xbox_(console)",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Game Boy Advance",
+                "ano_lancamento": 2001,
+                "empresa": "Nintendo",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Game_Boy_Advance",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Game Boy Advance SP",
+                    "Game Boy Micro"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "periodo": "Sétima Geração (2004-2013)",
+        "plataformas": [
+            {
+                "nome": "Nintendo DS",
+                "ano_lancamento": 2004,
+                "empresa": "Nintendo",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Nintendo_DS",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Nintendo DSi"
+                ]
+            },
+            {
+                "nome": "PSP",
+                "ano_lancamento": 2004,
+                "empresa": "Sony",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/PlayStation_Portable",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Xbox 360",
+                "ano_lancamento": 2005,
+                "empresa": "Microsoft",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Xbox_360",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "PlayStation 3",
+                "ano_lancamento": 2006,
+                "empresa": "Sony",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/PlayStation_3",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Wii",
+                "ano_lancamento": 2006,
+                "empresa": "Nintendo",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Wii",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Vii"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "periodo": "Oitava Geração (2011-2021)",
+        "plataformas": [
+            {
+                "nome": "Nintendo 3DS",
+                "ano_lancamento": 2011,
+                "empresa": "Nintendo",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Nintendo_3DS",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "New Nintendo 3DS"
+                ]
+            },
+            {
+                "nome": "PlayStation Vita",
+                "ano_lancamento": 2011,
+                "empresa": "Sony",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/PlayStation_Vita",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Nintendo Wii U",
+                "ano_lancamento": 2012,
+                "empresa": "Nintendo",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Wii_U",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "PlayStation 4",
+                "ano_lancamento": 2013,
+                "empresa": "Sony",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/PlayStation_4",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "PlayStation TV"
+                ]
+            },
+            {
+                "nome": "Xbox One",
+                "ano_lancamento": 2013,
+                "empresa": "Microsoft",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Xbox_One",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Nintendo Switch",
+                "ano_lancamento": 2017,
+                "empresa": "Nintendo",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Nintendo_Switch",
+                "variantes": [
+                    "Nintendo Switch Lite",
+                    "Nintendo Switch OLED"
+                ],
+                "versoes_alternativas": [
+                    "GPD Win",
+                    "GPD Win 2",
+                    "Steam Machine",
+                    "Nvidia Shield Portable",
+                    "Nvidia Shield TV",
+                    "Ouya",
+                    "Fire TV Gaming Edition",
+                    "Razer Forge TV",
+                    "OnLive",
+                    "Pandora",
+                    "Dingoo",
+                    "GP2X Wiz"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "periodo": "Nona Geração (2019-hoje)",
+        "plataformas": [
+            {
+                "nome": "Oculus/Meta Quest",
+                "ano_lancamento": 2019,
+                "empresa": "Meta",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Oculus_Quest",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Google Stadia",
+                "ano_lancamento": 2019,
+                "empresa": "Alphabet",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Google_Stadia",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Xbox Series X/S",
+                "ano_lancamento": 2020,
+                "empresa": "Microsoft",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Xbox_Series_X_and_S",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Xbox Ally"
+                ]
+            },
+            {
+                "nome": "PlayStation 5",
+                "ano_lancamento": 2020,
+                "empresa": "Sony",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/PlayStation_5",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Atari VCS",
+                "ano_lancamento": 2020,
+                "empresa": "Atari",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Atari_VCS_(2020)",
+                "variantes": [],
+                "versoes_alternativas": []
+            },
+            {
+                "nome": "Nintendo Switch 2",
+                "ano_lancamento": 2025,
+                "empresa": "Nintendo",
+                "imagem": "",
+                "href": "",
+                "link_externo": "https://pt.wikipedia.org/wiki/Nintendo_Switch",
+                "variantes": [],
+                "versoes_alternativas": [
+                    "Legion Go",
+                    "Legion Go S",
+                    "Aya Neo",
+                    "OneXPlayer",
+                    "Steam Deck",
+                    "Logitech G Cloud",
+                    "Rog Ally",
+                    "AYN Loki",
+                    "Orange Pi Neo",
+                    "MSI Claw"
+                ]
+            }
+        ]
+    }
+]

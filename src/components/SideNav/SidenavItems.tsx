@@ -19,7 +19,11 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     icon: <Icon icon="lucide:gamepad-2" width="24" height="24" />,
     submenu: true,
     subMenuItems: [
-
+      {
+        name: "Página de jogo",
+        path: "/game",
+        icon: <Icon icon="lucide:gamepad" width="24" height="24" />,
+      },
 
 
     ],

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import { useParams, useSearchParams } from "next/navigation";
 import { ToastContainer } from "react-toastify";
 
@@ -10,15 +10,20 @@ import { GameField, GameWithKey } from "@/@types";
 import toaster from "@/components/LayoutElements/Toaster";
 
 // importa o store
+import ResponsiveDialogDrawer from "@/components/ResponsiveDialogDrawer";
+import { useGameDialogStore } from "@/store/useGameDialogStore"
 import { useGamesStore } from "@/store/useGamesStore"; // ajuste o caminho conforme seu projeto
 
 export default function BacklogPage() {
+  const [open, setOpen] = useState(false);
+  const [game, setGame] = useState<SetStateAction<GameWithKey>>();
   const { id } = useParams<{ id: string }>();
   const searchParams = useSearchParams();
   const rawPageName = searchParams.get("page");
   const formattedPageName = rawPageName
     ? decodeURIComponent(rawPageName.replace(/\+/g, " "))
     : "";
+  const { openDialog } = useGameDialogStore()
 
   // estados e actions do store
   const {
@@ -39,6 +44,8 @@ export default function BacklogPage() {
     { title: "Gênero", dataIndex: "genre", key: "genre" },
   ];
 
+
+
   // menu contextual
   function renderContextMenu(
     game: GameWithKey,
@@ -56,7 +63,8 @@ export default function BacklogPage() {
       {
         key: `details-${game.key}`,
         label: "Ver detalhes",
-        onClick: () => alert(`Detalhes: ${game.name}`),
+        onClick: () => openDialog(game),
+
       },
       {
         key: `actions-${game.key}`,
@@ -81,6 +89,7 @@ export default function BacklogPage() {
 
       <HybridView data={games} fields={fields} renderContextMenu={renderContextMenu} />
       <ToastContainer />
+      <ResponsiveDialogDrawer />
     </div>
   );
 }

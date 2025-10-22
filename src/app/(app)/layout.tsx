@@ -11,7 +11,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import { ReactNode, FC, useState, useEffect } from "react";
 
 
-import { useAuth } from "@/hooks/useAuth";
+import { useAuth } from "@/app/hooks/useAuth";
 
 const AppLayout: FC<{ children: ReactNode }> = ({ children }) => {
   useAuth()

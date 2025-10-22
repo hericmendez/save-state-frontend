@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
-import useScroll from "@/hooks/useScroll";
+import useScroll from "@/app/hooks/useScroll";
 import { cn } from "@/utils/cn";
 
 import Image from "next/image";
@@ -12,7 +12,7 @@ import Logo from "@/assets/images/logo_ultimate.png";
 import UserLogo from "@/assets/images/user.png";
 import { Dropdown, Space } from "antd";
 import type { MenuProps } from "antd";
-import useLogout from "@/hooks/useLogout";
+import useLogout from "@/app/hooks/useLogout";
 
 import { pressStart2P } from "@/app/layout";
 import Cookies from 'js-cookie';
