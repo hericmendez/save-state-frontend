@@ -1,3 +1,4 @@
+//app/backlog/[id]/page.tsx
 "use client";
 
 import { SetStateAction, useEffect, useState } from "react";
@@ -13,7 +14,7 @@ import toaster from "@/components/LayoutElements/Toaster";
 import ResponsiveDialogDrawer from "@/components/ResponsiveDialogDrawer";
 import { useGameDialogStore } from "@/store/useGameDialogStore"
 import { useGamesStore } from "@/store/useGamesStore"; // ajuste o caminho conforme seu projeto
-
+import { useCategoriesStore } from "@/store/useCategoriesStore";
 export default function BacklogPage() {
   const [open, setOpen] = useState(false);
   const [game, setGame] = useState<SetStateAction<GameWithKey>>();
@@ -24,7 +25,7 @@ export default function BacklogPage() {
     ? decodeURIComponent(rawPageName.replace(/\+/g, " "))
     : "";
   const { openDialog } = useGameDialogStore()
-
+  const { categories, fetchCategories } = useCategoriesStore()
   // estados e actions do store
   const {
     games,
@@ -34,9 +35,15 @@ export default function BacklogPage() {
 
   // carrega backlog da categoria ao montar
   useEffect(() => {
-    if (id) fetchBacklogGames(id);
-  }, [id, fetchBacklogGames]);
+    if (id) {
+      fetchBacklogGames(id)
 
+    };
+    fetchCategories()
+  }, [id, categories, fetchBacklogGames]);
+
+
+  console.log(games)
   // campos da tabela
   const fields: GameField[] = [
     { title: "Nome", dataIndex: "name", key: "name" },

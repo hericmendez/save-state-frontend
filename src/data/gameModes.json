@@ -1,0 +1,60 @@
+{
+  "modes": [
+    {
+      "id": 1,
+      "nome": "Single-player",
+      "slug": "singleplayer",
+      "descricao": "Modo de jogo para um jogador.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/game_modes/single-player"
+    },
+    {
+      "id": 2,
+      "nome": "Multiplayer",
+      "slug": "multiplayer",
+      "descricao": "Modo com mais de um jogador, local ou online.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/game_modes/multiplayer"
+    },
+    {
+      "id": 3,
+      "nome": "Cooperative",
+      "slug": "cooperative",
+      "descricao": "Jogadores trabalham juntos com objetivo compartilhado.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/game_modes/cooperative"
+    },
+    {
+      "id": 4,
+      "nome": "Split screen",
+      "slug": "split-screen",
+      "descricao": "Jogadores dividem a mesma tela em segmentos.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/game_modes/split-screen"
+    },
+    {
+      "id": 5,
+      "nome": "Massively Multiplayer Online",
+      "slug": "mmo",
+      "descricao": "Grande número de jogadores compartilhando o mesmo mundo.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/game_modes/massively-multiplayer-online"
+    },
+    {
+      "id": 6,
+      "nome": "Battle Royale",
+      "slug": "battle-royale",
+      "descricao": "Vários jogadores lutam até restar apenas um sobrevivente.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/game_modes/battle-royale"
+    },
+    {
+      "id": 7,
+      "nome": "VR",
+      "slug": "vr",
+      "descricao": "Modo específico para Realidade Virtual.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/game_modes/vr"
+    }
+  ]
+}

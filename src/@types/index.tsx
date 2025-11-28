@@ -46,6 +46,7 @@ export type DataItemWithKey = DataItem & {
 
 export type GameWithKey = Game & {
   key: string | number;
+  dbId?: string;
 }
 export type Field = {
   title: string;

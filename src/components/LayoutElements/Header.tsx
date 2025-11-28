@@ -16,8 +16,9 @@ import useLogout from "@/app/hooks/useLogout";
 
 import { pressStart2P } from "@/app/layout";
 import Cookies from 'js-cookie';
-import { SearchInput } from './SearchInput';
 
+const username = Cookies.get('username')
+import { SearchInput } from './SearchInput';
 export default function Header() {
   const username = Cookies.get('username')
   console.log("username ==> ", username);
@@ -45,14 +46,14 @@ export default function Header() {
   return (
     <nav
       className={cn(
-        `sticky inset-x-0 top-0 w-full transition-all border-b border-slate-200`,
+        `sticky inset-x-0 top-0 w-full transition-all border-b border-slate-200 z-100`,
         {
           "border-b border-gray-200 bg-white/75 backdrop-blur-lg": scrolled,
           "border-b border-gray-200 bg-white": selectedLayout,
         }
       )}
     >
-      <div className="fixed border-b-2 left-0 top-0 transition-colors w-[100vw] duration-1000 flex h-[60px] items-center justify-between px-4 bg-mist-gray dark:bg-slate-900 z-10">
+      <div className="fixed border-b-2 left-0 top-0 transition-colors w-[100vw] duration-1000 flex h-[60px] items-center justify-between px-4 bg-mist-gray dark:bg-slate-900">
         {/* LOGO */}
         <div className="flex items-center space-x-4 md:w-[18rem]">
           <Link

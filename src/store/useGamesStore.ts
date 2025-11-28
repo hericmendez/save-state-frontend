@@ -15,6 +15,8 @@ type GamesState = {
   fetchedIds: Set<number>
   fetchBacklogGames: (categoryId?: string) => Promise<void>
   fetchSearchGames: (query: string) => Promise<void>
+  fetchCollectionGames: (collection: string, id: string) => Promise<void>
+  fetchPCGames: (filter: string) => Promise<void>
   addGameToBacklog: (game: any, category: any) => Promise<void>
   removeGameFromCategory: (categoryId: string, game: any) => Promise<void>
   clearGames: () => void
@@ -42,10 +44,7 @@ export const useGamesStore = create<GamesState>((set, get) => ({
     }
   },
 
-  // Busca na IGDB (ou endpoint de search). Usada pela pagina de busca.
-  // IMPORTANTE: quando mudar a query, chame clearGames() antes para resetar fetchedIds e results.
   fetchSearchGames: async (query: string) => {
-
     if (!query) {
       set({ hasMore: false })
       return
@@ -53,10 +52,10 @@ export const useGamesStore = create<GamesState>((set, get) => ({
 
     set({ loading: true })
     try {
-const res = await axios.get(
-  `${process.env.NEXT_PUBLIC_API_URL}/games`,
-  { params: { title: decodeURIComponent(query) } } // forma mais segura e automática
-);
+      const res = await axios.get(
+        `${process.env.NEXT_PUBLIC_API_URL}/games`,
+        { params: { title: decodeURIComponent(query) } } // forma mais segura e automática
+      )
 
       // Algumas APIs retornam payload em data.data; adapt conforme o seu caso
       const apiData = res?.data?.data ?? res?.data ?? []
@@ -84,6 +83,83 @@ const res = await axios.get(
     }
   },
 
+  fetchPCGames: async (filter: string) => {
+    if (!filter) {
+      set({ hasMore: false })
+      return
+    }
+
+    set({ loading: true })
+    try {
+      const res = await axios.get(
+        `${process.env.NEXT_PUBLIC_API_URL}/pcgames`,
+        { params: { title: decodeURIComponent(filter) } } // forma mais segura e automática
+      )
+
+      // Algumas APIs retornam payload em data.data; adapt conforme o seu caso
+      const apiData = res?.data?.data ?? res?.data ?? []
+      // filtra por ids que já adicionamos
+      const newOnes = (apiData as any[]).filter(
+        g => !get().fetchedIds.has(g.id)
+      )
+
+      if (!newOnes.length) {
+        // se não veio nada novo — assume que acabou (ou resultado já carregado)
+        set({ hasMore: false })
+        return
+      }
+
+      // marca ids para evitar duplicatas
+      newOnes.forEach(g => get().fetchedIds.add(g.id))
+
+      const adapted = adaptIgdbGames(newOnes)
+      set(state => ({ games: [...state.games, ...adapted] }))
+    } catch (err) {
+      console.error('fetchPCGames error', err)
+      set({ hasMore: false })
+    } finally {
+      set({ loading: false })
+    }
+  },
+
+  fetchCollectionGames: async (collection: string, id: number) => {
+    if (!id) {
+      set({ hasMore: false })
+      return
+    }
+
+    set({ loading: true })
+    try {
+      const res = await axios.get(
+        `${process.env.NEXT_PUBLIC_API_URL}/collections/${collection}/${id}`
+      )
+   console.log("apiData ==> ", res);
+      // Algumas APIs retornam payload em data.data; adapt conforme o seu caso
+      const apiData = res?.data?.data ?? res?.data ?? []
+   
+      // filtra por ids que já adicionamos
+      const newOnes = (apiData as any[]).filter(
+        g => !get().fetchedIds.has(g.id)
+      )
+
+      if (!newOnes.length) {
+        // se não veio nada novo — assume que acabou (ou resultado já carregado)
+        set({ hasMore: false })
+        return
+      }
+
+      // marca ids para evitar duplicatas
+      newOnes.forEach(g => get().fetchedIds.add(g.id))
+
+      const adapted = adaptIgdbGames(newOnes)
+      set(state => ({ games: [...state.games, ...adapted] }))
+    } catch (err) {
+      console.error('fetchSearchGames error', err)
+      set({ hasMore: false })
+    } finally {
+      set({ loading: false })
+    }
+  },
   addGameToBacklog: async (game, category) => {
     const payload = {
       category_ids: [category._id],
@@ -121,7 +197,7 @@ const res = await axios.get(
     }
   },
 
-  updateGameInBacklog: async (game:any):Promise<any>  => {
+  updateGameInBacklog: async (game: any): Promise<any> => {
     try {
       await api.put(`/backlog/${game.dbId}`)
       toaster('success', `${game.name} atualizado com sucesso`)
@@ -145,7 +221,7 @@ const res = await axios.get(
     }
   },
 
-  removeGameFromBacklog: async (game:any):Promise<any> => {
+  removeGameFromBacklog: async (game: any): Promise<any> => {
     try {
       await api.delete(`/backlog/${game.dbId}`)
       toaster('success', `${game.name} excluído com sucesso`)

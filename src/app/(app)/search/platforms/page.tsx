@@ -1,6 +1,7 @@
+
 "use client"
 
-import * as React from "react"
+import { useState, useEffect } from "react"
 import { ChevronDown } from "lucide-react"
 import {
   Collapsible,
@@ -10,13 +11,20 @@ import {
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import plataformasJson from "@/data/plataformas.json"
 
+
+import Link from "next/link"
+
+
 export default function ConsolesPorGeracao() {
-const [openItems, setOpenItems] = React.useState<number[]>(
+  const [openItems, setOpenItems] = useState<number[]>(
   plataformasJson.map((_, index) => index)
 )
-  const [searchTerm, setSearchTerm] = React.useState("")
-  const [orderAsc, setOrderAsc] = React.useState(false)
-  const [filterEmpresa, setFilterEmpresa] = React.useState("Todos")
+  const [searchTerm, setSearchTerm] = useState("")
+  const [orderAsc, setOrderAsc] = useState(false)
+  const [filterEmpresa, setFilterEmpresa] = useState("Todos")
+
+
+
 
   const toggleItem = (index: number) => {
     setOpenItems(prev =>
@@ -72,7 +80,7 @@ const [openItems, setOpenItems] = React.useState<number[]>(
           onChange={e => setFilterEmpresa(e.target.value)}
           className="p-2 border rounded shadow-sm focus:outline-none focus:ring focus:ring-orange-400"
         >
-          <option>Todos</option>
+          <option className="text-zinc-900">Todos</option>
           {empresas.map(emp => (
             <option key={emp}>{emp}</option>
           ))}
@@ -95,7 +103,7 @@ const [openItems, setOpenItems] = React.useState<number[]>(
               className="border-b"
             >
               <CollapsibleTrigger className="flex w-full items-center justify-between p-4 text-left hover:bg-muted/50">
-                <span className="font-medium">{geracao.periodo}</span>
+                <span className="text-xl fw-bold">{geracao.periodo}</span>
                 <ChevronDown
                   className={`h-4 w-4 transition-transform duration-200 ${
                     openItems.includes(index) ? "transform rotate-180" : ""
@@ -107,28 +115,55 @@ const [openItems, setOpenItems] = React.useState<number[]>(
                   {geracao.plataformas.map(platforma => (
                     <Tooltip key={platforma.nome}>
                       <TooltipTrigger asChild>
-                        <a
-                          href={platforma.href || "#"}
-                          target="_blank"
-                          className={`flex flex-col items-center p-2 border rounded hover:shadow-md transition relative ${getHighlight(platforma)}`}
+                        <Link
+                          href={`/search/list?collection=platform&id=${platforma.igdb_id}`}
+
+                          className={`
+    group flex flex-col items-center 
+    p-4 rounded-xl 
+    border border-white/10 
+    bg-white/5 backdrop-blur 
+    shadow-lg
+    transition 
+    hover:shadow-orange-500/20 
+    hover:border-orange-400/40 
+    hover:bg-white/10
+    relative 
+    ${getHighlight(platforma)}
+  `}
                         >
-                          <img
-                            src={
-                              platforma.imagem ||
-                              `https://placehold.co/400/orange/white?text=${encodeURIComponent(
-                                platforma.nome
-                              )}`
-                            }
-                            alt={platforma.nome}
-                            className="w-full h-40 object-contain mb-2"
-                          />
-                          <span className="text-sm font-medium text-center">
+                          <div className="w-full h-28 flex items-center justify-center mb-3">
+                            <img
+                              src={
+                                platforma.imagem ||
+                                `https://placehold.co/400/orange/white?text=${encodeURIComponent(
+                                  platforma.nome
+                                )}`
+                              }
+                              alt={platforma.nome}
+                              className="
+        w-20 h-20 object-contain 
+        transition 
+        group-hover:scale-105
+      "
+                            />
+                          </div>
+
+                          <span
+                            className="
+      text-sm font-semibold 
+      text-center 
+      group-hover:text-orange-400 
+      transition
+    "
+                          >
                             {platforma.nome}
                           </span>
-                        </a>
+                        </Link>
+
                       </TooltipTrigger>
-                      <TooltipContent className="max-w-xs">
-                        <div className="space-y-1">
+                      <TooltipContent className="max-w-xs bg-slate-900">
+                        <div className="space-y-1 text-white">
                           <p>
                             <strong>Ano:</strong> {platforma.ano_lancamento}
                           </p>

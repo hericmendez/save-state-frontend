@@ -50,7 +50,7 @@ console.log("item ==> ", item.name);
           <div className="my-2 ml-8 flex flex-col space-y-1">
             {item.subMenuItems?.map((subItem, i) => {
               const isComponentName = React.isValidElement(subItem.name)
-              console.log("subItem.name ==> ", subItem.name);
+
 
               const items: ContextMenuItemType[] = [
                 {

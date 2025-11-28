@@ -5,6 +5,7 @@
         "plataformas": [
             {
                 "nome": "Magnavox Odyssey",
+                "igdb_id": 88,
                 "ano_lancamento": 1972,
                 "empresa": "Magnavox",
                 "imagem": "",
@@ -15,6 +16,7 @@
             },
             {
                 "nome": "Pong",
+                "igdb_id": null,
                 "ano_lancamento": 1975,
                 "empresa": "Atari",
                 "imagem": "",
@@ -22,55 +24,18 @@
                 "link_externo": "https://pt.wikipedia.org/wiki/Pong_(jogo_eletr%C3%B4nico)",
                 "variantes": [],
                 "versoes_alternativas": []
-            },
-            {
-                "nome": "Philips Tele-Spiel",
-                "ano_lancamento": 1975,
-                "empresa": "Philips",
-                "imagem": "",
-                "href": "",
-                "link_externo": "https://pt.wikipedia.org/wiki/Philips_Tele-Spiel",
-                "variantes": [],
-                "versoes_alternativas": []
-            },
-            {
-                "nome": "Coleco Telstar",
-                "ano_lancamento": 1976,
-                "empresa": "Coleco",
-                "imagem": "",
-                "href": "",
-                "link_externo": "https://pt.wikipedia.org/wiki/Coleco_Telstar",
-                "variantes": [],
-                "versoes_alternativas": []
-            },
-            {
-                "nome": "Color TV Game",
-                "ano_lancamento": 1977,
-                "empresa": "Nintendo",
-                "imagem": "",
-                "href": "",
-                "link_externo": "https://pt.wikipedia.org/wiki/Color_TV_Game",
-                "variantes": [],
-                "versoes_alternativas": []
             }
+
         ]
     },
     {
         "id": 2,
         "periodo": "Segunda Geração (1976-1984)",
         "plataformas": [
-            {
-                "nome": "Fairchild Channel F",
-                "ano_lancamento": 1976,
-                "empresa": "Fairchild",
-                "imagem": "",
-                "href": "",
-                "link_externo": "https://pt.wikipedia.org/wiki/Fairchild_Channel_F",
-                "variantes": [],
-                "versoes_alternativas": []
-            },
+
             {
                 "nome": "Atari 2600",
+                "igdb_id": 59,
                 "ano_lancamento": 1977,
                 "empresa": "Atari",
                 "imagem": "",
@@ -85,6 +50,7 @@
             },
             {
                 "nome": "Bally Astrocade",
+                "igdb_id": 91,
                 "ano_lancamento": 1977,
                 "empresa": "Midway",
                 "imagem": "",
@@ -95,6 +61,7 @@
             },
             {
                 "nome": "Intellivision",
+                "igdb_id": 67,
                 "ano_lancamento": 1980,
                 "empresa": "Mattel",
                 "imagem": "",
@@ -107,6 +74,7 @@
             },
             {
                 "nome": "Vectrex",
+                "igdb_id": 700,
                 "ano_lancamento": 1982,
                 "empresa": "Entex",
                 "imagem": "",
@@ -117,6 +85,7 @@
             },
             {
                 "nome": "ColecoVision",
+                "igdb_id": 68,
                 "ano_lancamento": 1982,
                 "empresa": "Coleco",
                 "imagem": "",
@@ -130,6 +99,7 @@
             },
             {
                 "nome": "Sega SG-1000",
+                "igdb_id": 84,
                 "ano_lancamento": 1983,
                 "empresa": "Sega",
                 "imagem": "",
@@ -140,6 +110,7 @@
             },
             {
                 "nome": "Magnavox Odyssey²",
+                "igdb_id": 88,
                 "ano_lancamento": 1978,
                 "empresa": "Magnavox/Philips",
                 "imagem": "",
@@ -156,6 +127,7 @@
         "plataformas": [
             {
                 "nome": "NES/Famicom",
+                "igdb_id": 18,
                 "ano_lancamento": 1983,
                 "empresa": "Nintendo",
                 "imagem": "",
@@ -173,6 +145,7 @@
             },
             {
                 "nome": "Master System",
+                "igdb_id": 64,
                 "ano_lancamento": 1987,
                 "empresa": "Sega",
                 "imagem": "",
@@ -185,6 +158,7 @@
             },
             {
                 "nome": "Game Boy",
+                "igdb_id": 33,
                 "ano_lancamento": 1989,
                 "empresa": "Nintendo",
                 "imagem": "",
@@ -197,6 +171,7 @@
             },
             {
                 "nome": "Atari 7800",
+                "igdb_id": 60,
                 "ano_lancamento": 1986,
                 "empresa": "Atari",
                 "imagem": "",
@@ -213,6 +188,7 @@
         "plataformas": [
             {
                 "nome": "PC Engine/TurboGrafx-16",
+                "igdb_id": 86,
                 "ano_lancamento": 1987,
                 "empresa": "NEC",
                 "imagem": "",
@@ -225,6 +201,7 @@
             },
             {
                 "nome": "Mega Drive/Genesis",
+                "igdb_id": 29,
                 "ano_lancamento": 1988,
                 "empresa": "Sega",
                 "imagem": "",
@@ -238,6 +215,7 @@
             },
             {
                 "nome": "Neo-Geo",
+                "igdb_id": 79,
                 "ano_lancamento": 1990,
                 "empresa": "SNK",
                 "imagem": "",
@@ -250,6 +228,7 @@
             },
             {
                 "nome": "Super Nintendo/Super Famicom",
+                "igdb_id": 19,
                 "ano_lancamento": 1990,
                 "empresa": "Nintendo",
                 "imagem": "",
@@ -262,6 +241,7 @@
             },
             {
                 "nome": "Atari Lynx",
+                "igdb_id": 81,
                 "ano_lancamento": 1989,
                 "empresa": "Atari",
                 "imagem": "",
@@ -271,26 +251,6 @@
                 "versoes_alternativas": [
                     "Handhelds compatíveis ou clones regionais"
                 ]
-            },
-            {
-                "nome": "Supervision",
-                "ano_lancamento": 1992,
-                "empresa": "Watara",
-                "imagem": "",
-                "href": "",
-                "link_externo": "https://pt.wikipedia.org/wiki/Watara_Supervision",
-                "variantes": [],
-                "versoes_alternativas": []
-            },
-            {
-                "nome": "Mega Duck/Cougar Boy",
-                "ano_lancamento": 1993,
-                "empresa": "Creatonic/Timlex/Videojet",
-                "imagem": "",
-                "href": "",
-                "link_externo": "https://pt.wikipedia.org/wiki/Mega_Duck",
-                "variantes": [],
-                "versoes_alternativas": []
             }
         ]
     },
@@ -300,6 +260,7 @@
         "plataformas": [
             {
                 "nome": "3DO",
+                "igdb_id": 50,
                 "ano_lancamento": 1993,
                 "empresa": "Panasonic/Sanyo/GoldStar",
                 "imagem": "",
@@ -310,6 +271,7 @@
             },
             {
                 "nome": "Sega Saturn",
+                "igdb_id": 32,
                 "ano_lancamento": 1994,
                 "empresa": "Sega",
                 "imagem": "",
@@ -320,6 +282,7 @@
             },
             {
                 "nome": "PlayStation",
+                "igdb_id": 7,
                 "ano_lancamento": 1994,
                 "empresa": "Sony",
                 "imagem": "",
@@ -333,6 +296,7 @@
             },
             {
                 "nome": "Nintendo 64",
+                "igdb_id": 4,
                 "ano_lancamento": 1996,
                 "empresa": "Nintendo",
                 "imagem": "",
@@ -349,9 +313,10 @@
         "plataformas": [
             {
                 "nome": "Dreamcast",
+                "igdb_id": 23,
                 "ano_lancamento": 1998,
                 "empresa": "Sega",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/0/07/Dreamcast-Console-Set.png",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Sega_Dreamcast",
                 "variantes": [],
@@ -359,9 +324,10 @@
             },
             {
                 "nome": "PlayStation 2",
+                "igdb_id": 8,
                 "ano_lancamento": 2000,
                 "empresa": "Sony",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/3/39/PS2-Versions.png",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/PlayStation_2",
                 "variantes": [],
@@ -372,9 +338,10 @@
             },
             {
                 "nome": "GameCube",
+                "igdb_id": 21,
                 "ano_lancamento": 2001,
                 "empresa": "Nintendo",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/2/2b/GameCube-Console-Set.png",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Nintendo_GameCube",
                 "variantes": [],
@@ -382,9 +349,10 @@
             },
             {
                 "nome": "Xbox",
+                "igdb_id": 11,
                 "ano_lancamento": 2001,
                 "empresa": "Microsoft",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Xbox-Console-Set.png",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Xbox_(console)",
                 "variantes": [],
@@ -392,9 +360,10 @@
             },
             {
                 "nome": "Game Boy Advance",
+                "igdb_id": 24,
                 "ano_lancamento": 2001,
                 "empresa": "Nintendo",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Nintendo-Game-Boy-Advance-Purple-FL.jpg",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Game_Boy_Advance",
                 "variantes": [],
@@ -411,9 +380,10 @@
         "plataformas": [
             {
                 "nome": "Nintendo DS",
+                "igdb_id": 20,
                 "ano_lancamento": 2004,
                 "empresa": "Nintendo",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/8/82/Nintendo_DS_Trans.png",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Nintendo_DS",
                 "variantes": [],
@@ -423,9 +393,10 @@
             },
             {
                 "nome": "PSP",
+                "igdb_id": 38,
                 "ano_lancamento": 2004,
                 "empresa": "Sony",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/4/46/Psp-1000.jpg",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/PlayStation_Portable",
                 "variantes": [],
@@ -433,9 +404,10 @@
             },
             {
                 "nome": "Xbox 360",
+                "igdb_id": 12,
                 "ano_lancamento": 2005,
                 "empresa": "Microsoft",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/7/76/Xbox-360S-Console-Set.jpg",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Xbox_360",
                 "variantes": [],
@@ -443,9 +415,10 @@
             },
             {
                 "nome": "PlayStation 3",
+                "igdb_id": 9,
                 "ano_lancamento": 2006,
                 "empresa": "Sony",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/9/90/Sony-PlayStation-3-CECHA01-wController-L.jpg",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/PlayStation_3",
                 "variantes": [],
@@ -453,9 +426,10 @@
             },
             {
                 "nome": "Wii",
+                "igdb_id": 5,
                 "ano_lancamento": 2006,
                 "empresa": "Nintendo",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Wii-Console.png",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Wii",
                 "variantes": [],
@@ -471,9 +445,10 @@
         "plataformas": [
             {
                 "nome": "Nintendo 3DS",
+                "igdb_id": 37,
                 "ano_lancamento": 2011,
                 "empresa": "Nintendo",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Nintendo-3DS-AquaOpen.png",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Nintendo_3DS",
                 "variantes": [],
@@ -483,9 +458,10 @@
             },
             {
                 "nome": "PlayStation Vita",
+                "igdb_id": 46,
                 "ano_lancamento": 2011,
                 "empresa": "Sony",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/e/e0/PlayStation-Vita-1101-FL.png",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/PlayStation_Vita",
                 "variantes": [],
@@ -493,9 +469,10 @@
             },
             {
                 "nome": "Nintendo Wii U",
+                "igdb_id": 41,
                 "ano_lancamento": 2012,
                 "empresa": "Nintendo",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Wii_U_Console_and_Gamepad.png",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Wii_U",
                 "variantes": [],
@@ -503,9 +480,10 @@
             },
             {
                 "nome": "PlayStation 4",
+                "igdb_id": 48,
                 "ano_lancamento": 2013,
                 "empresa": "Sony",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/7/71/Sony-PlayStation-4-PS4-wDualShock-4.jpg",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/PlayStation_4",
                 "variantes": [],
@@ -515,9 +493,10 @@
             },
             {
                 "nome": "Xbox One",
+                "igdb_id": 49,
                 "ano_lancamento": 2013,
                 "empresa": "Microsoft",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/0/05/Microsoft-Xbox-One-Console-Set-wKinect.jpg",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Xbox_One",
                 "variantes": [],
@@ -525,9 +504,10 @@
             },
             {
                 "nome": "Nintendo Switch",
+                "igdb_id": 130,
                 "ano_lancamento": 2017,
                 "empresa": "Nintendo",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/7/76/Nintendo-Switch-Console-Docked-wJoyConRB.jpg",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Nintendo_Switch",
                 "variantes": [
@@ -557,9 +537,10 @@
         "plataformas": [
             {
                 "nome": "Oculus/Meta Quest",
+                "igdb_id": 162,
                 "ano_lancamento": 2019,
                 "empresa": "Meta",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Oculus_Quest.jpeg",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Oculus_Quest",
                 "variantes": [],
@@ -567,9 +548,10 @@
             },
             {
                 "nome": "Google Stadia",
+                "igdb_id": 162,
                 "ano_lancamento": 2019,
                 "empresa": "Alphabet",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/7/76/Stadia-controller-and-Chromecast-Ultra-from-Premiere-Edition.jpg",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Google_Stadia",
                 "variantes": [],
@@ -577,9 +559,10 @@
             },
             {
                 "nome": "Xbox Series X/S",
+                "igdb_id": 162,
                 "ano_lancamento": 2020,
                 "empresa": "Microsoft",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/5/54/Xbox_Series_S_with_controller.jpg",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Xbox_Series_X_and_S",
                 "variantes": [],
@@ -589,29 +572,22 @@
             },
             {
                 "nome": "PlayStation 5",
+                "igdb_id": 0,
                 "ano_lancamento": 2020,
                 "empresa": "Sony",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/7/77/Black_and_white_Playstation_5_base_edition_with_controller.png",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/PlayStation_5",
                 "variantes": [],
                 "versoes_alternativas": []
             },
-            {
-                "nome": "Atari VCS",
-                "ano_lancamento": 2020,
-                "empresa": "Atari",
-                "imagem": "",
-                "href": "",
-                "link_externo": "https://pt.wikipedia.org/wiki/Atari_VCS_(2020)",
-                "variantes": [],
-                "versoes_alternativas": []
-            },
+      
             {
                 "nome": "Nintendo Switch 2",
+                "igdb_id": 508,
                 "ano_lancamento": 2025,
                 "empresa": "Nintendo",
-                "imagem": "",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/5/50/Nintendo_Switch_2_in_Handheld_Mode.jpg",
                 "href": "",
                 "link_externo": "https://pt.wikipedia.org/wiki/Nintendo_Switch",
                 "variantes": [],

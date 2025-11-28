@@ -8,27 +8,51 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     path: "/",
     icon: <Icon icon="lucide:home" width="24" height="24" />,
   },
-  {
+/*   {
     name: "Estatísticas",
     path: "/dashboard",
     icon: <Icon icon="lucide:chart-spline" width="24" height="24" />,
-  },
+  }, */
   {
     name: "Meu Backlog",
     path: "/games",
     icon: <Icon icon="lucide:gamepad-2" width="24" height="24" />,
     submenu: true,
     subMenuItems: [
-      {
-        name: "Página de jogo",
-        path: "/game",
-        icon: <Icon icon="lucide:gamepad" width="24" height="24" />,
-      },
+
 
 
     ],
   },
   {
+    name: "Buscar jogos",
+    path: "/search",
+    icon: <Icon icon="lucide:cog" width="24" height="24" />,
+    submenu: true,
+    subMenuItems: [
+      {
+        name: "Plataformas (por geração)",
+        path: "/search/platforms/",
+      },
+      {
+        name: "Jogos de PC",
+        path: "/search/pcgames/",
+      },
+      /*       {
+              name: "Gêneros",
+              path: "/search/genres",
+            },
+            {
+              name: "Temas",
+              path: "/search/themes",
+            },
+            {
+              name: "Modos de Jogo",
+              path: "/search/game-modes",
+            } */
+    ],
+  },
+/*   {
     name: "Preferências",
     path: "/settings",
     icon: <Icon icon="lucide:cog" width="24" height="24" />,
@@ -44,6 +68,6 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
         id: "loading"
       },
     ],
-  },
+  }, */
 
 ];

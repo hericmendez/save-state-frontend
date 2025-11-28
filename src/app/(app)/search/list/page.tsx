@@ -1,4 +1,4 @@
-//app/search/[query]/page.tsx
+//app/search/list/page.tsx
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -11,9 +11,11 @@ import { ToastContainer } from "react-toastify";
 import toaster from "@/components/LayoutElements/Toaster";
 import { useCategoriesStore } from "@/store/useCategoriesStore";
 import { useGamesStore } from "@/store/useGamesStore";
-
+import { useSearchParams } from "next/navigation";
 export default function GamesList() {
-  const { query } = useParams<{ query: string }>();
+const search = useSearchParams();
+const collection = search.get("collection");
+const id = search.get("id");
   const { categories, fetchCategories } = useCategoriesStore();
 
   // usa o store unificado
@@ -21,7 +23,7 @@ export default function GamesList() {
     games,
     loading,
     hasMore,
-    fetchSearchGames,
+    fetchCollectionGames,
     addGameToBacklog,
     clearGames,
   } = useGamesStore();
@@ -31,44 +33,25 @@ export default function GamesList() {
     addGameToBacklog(game, cat)
     fetchCategories()
 
-
   }
 
-  // quando a query muda: clear + novo fetch
+  // quando a id muda: clear + novo fetch
   useEffect(() => {
     fetchCategories();
 
-    // resetar resultados anteriores ao trocar a query
+    // resetar resultados anteriores ao trocar a id
     clearGames();
 
-    if (query) {
-      console.log("query to fetchSearchGames ==> ", decodeURIComponent(query));
+    if (id) {
+      console.log("id to fetchCollectionGames ==> ", decodeURIComponent(id));
 
-      fetchSearchGames(query);
+      fetchCollectionGames(collection,id);
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
+  }, [id]);
 
-  // IntersectionObserver para infinite scroll: ao atingir o loader, pede mais results
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && hasMore && query) {
-          fetchSearchGames(query);
-        }
-      },
-      { threshold: 1.0 }
-    );
-
-    if (loaderRef.current) observer.observe(loaderRef.current);
-
-    return () => {
-      if (loaderRef.current) observer.unobserve(loaderRef.current);
-      observer.disconnect();
-    };
-    // dependências: hasMore e query usados dentro; fetchSearchGames vem do store
-  }, [hasMore, query, fetchSearchGames]);
-
+    console.log(games)
   const fields: GameField[] = [
     { title: "Nome", dataIndex: "name", key: "name" },
     { title: "Plataforma", dataIndex: "platform", key: "platform" },
@@ -116,9 +99,9 @@ export default function GamesList() {
         <LoadingOverlay show={loading} />
       ) : (
         <div className="games-container pt-4 w-full overflow-hidden z-1">
+        
           <HybridView data={games} fields={fields} renderContextMenu={renderContextMenu} />
-          {/* Loader para infinite scroll; o observer observa esse elemento */}
-          <div ref={loaderRef} className="h-8" />
+    
           <ToastContainer />
         </div>
       )}

@@ -1,0 +1,76 @@
+{
+  "themes": [
+    {
+      "id": 1,
+      "nome": "Action",
+      "slug": "action",
+      "descricao": "Jogos focados em ação rápida e reflexos.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/themes/action"
+    },
+    {
+      "id": 17,
+      "nome": "Fantasy",
+      "slug": "fantasy",
+      "descricao": "Universos mágicos, épicos e fantásticos.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/themes/fantasy"
+    },
+    {
+      "id": 19,
+      "nome": "Science Fiction",
+      "slug": "sci-fi",
+      "descricao": "Ficção científica, futuros distantes, tecnologia avançada.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/themes/science-fiction"
+    },
+    {
+      "id": 20,
+      "nome": "Horror",
+      "slug": "horror",
+      "descricao": "Atmosfera assustadora, ameaças e elementos de terror.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/themes/horror"
+    },
+    {
+      "id": 22,
+      "nome": "Survival",
+      "slug": "survival",
+      "descricao": "Jogos focados em sobrevivência em ambientes hostis.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/themes/survival"
+    },
+    {
+      "id": 43,
+      "nome": "Thriller",
+      "slug": "thriller",
+      "descricao": "Suspense, mistério e tensão.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/themes/thriller"
+    },
+    {
+      "id": 39,
+      "nome": "Non-fiction",
+      "slug": "non-fiction",
+      "descricao": "Baseado em eventos reais ou educativos.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/themes/non-fiction"
+    },
+    {
+      "id": 23,
+      "nome": "Historical",
+      "slug": "historical",
+      "descricao": "Temas baseados em fatos históricos.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/themes/historical"
+    },
+    {
+      "id": 41,
+      "nome": "Erotic",
+      "slug": "erotic",
+      "descricao": "Conteúdo adulto e temáticas sensuais.",
+      "imagem": "",
+      "link_externo": "https://www.igdb.com/themes/erotic"
+    }
+  ]
+}

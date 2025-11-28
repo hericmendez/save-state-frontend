@@ -1,0 +1,82 @@
+{
+  "plataformas": [
+    {
+      "nome": "MS-DOS",
+      "slug": "msdos",
+      "ano_lancamento": 1981,
+      "empresa": "Microsoft",
+      "icon": "/icons/msdos.png",
+      "link_externo": "https://en.wikipedia.org/wiki/MS-DOS"
+    },
+    {
+      "nome": "PC Booter",
+      "slug": "pcbooter",
+      "ano_lancamento": 1981,
+      "empresa": "IBM Compatíveis",
+      "icon": "/icons/pcbooter.png"
+    },
+    {
+      "nome": "CD-ROM Games",
+      "slug": "cdrom",
+      "ano_lancamento": 1990,
+      "empresa": "Vários",
+      "icon": "/icons/cdrom.png"
+    },
+    {
+      "nome": "CD/DVD Era",
+      "slug": "cddvd",
+      "ano_lancamento": 1995,
+      "empresa": "Vários",
+      "icon": "/icons/cddvd.png"
+    },
+    {
+      "nome": "Flash",
+      "slug": "flash",
+      "ano_lancamento": 2000,
+      "empresa": "Adobe",
+      "icon": "/icons/flash.png"
+    },
+    {
+      "nome": "SteamOS / Linux",
+      "slug": "steamos",
+      "ano_lancamento": 2013,
+      "empresa": "Valve",
+      "icon": "/icons/steamos.png"
+    },
+    {
+      "nome": "itch.io",
+      "slug": "itchio",
+      "ano_lancamento": 2013,
+      "empresa": "itch Corp",
+      "icon": "/icons/itchio.png"
+    },
+    {
+      "nome": "Storefronts",
+      "slug": "storefront",
+      "ano_lancamento": 2010,
+      "empresa": "Multiplataforma",
+      "icon": "/icons/storefront.png"
+    },
+    {
+      "nome": "Lutris",
+      "slug": "lutris",
+      "ano_lancamento": 2010,
+      "empresa": "Lutris",
+      "icon": "/icons/lutris.png"
+    },
+    {
+      "nome": "Windows",
+      "slug": "windows",
+      "ano_lancamento": 1985,
+      "empresa": "Microsoft",
+      "icon": "/icons/windows.png"
+    },
+    {
+      "nome": "macOS",
+      "slug": "macos",
+      "ano_lancamento": 2001,
+      "empresa": "Apple",
+      "icon": "/icons/macos.png"
+    }
+  ]
+}
